@@ -2,27 +2,26 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+
 class App extends Component {
+
   render() {
     return (
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+          <p id="help" className="text-uppercase">Helpful notes will appear here</p>
+          <p>E-mail: <input type="text" id="email" name="email" /></p>
+          <p>Name: <input type="text" id="name" name="name" /></p>
+          <p>Age: <input type="text" id="age" name="age" /></p>
         </header>
       </div>
     );
   }
 }
+
+
+
+
 
 export default App;
