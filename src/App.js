@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Testcomponent from './testcomponent';
 
 
 class App extends Component {
@@ -15,6 +16,7 @@ class App extends Component {
           <p>Name: <input type="text" id="name" name="name" /></p>
           <p>Age: <input type="text" id="age" name="age" /></p>
         </header>
+        <Testcomponent />
       </div>
     );
   }
