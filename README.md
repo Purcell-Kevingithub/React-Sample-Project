@@ -1,3 +1,2 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-This is a simple sample of creating a React app.
+## General info
+This project is going to emulate a shopping website when completed. Coming soon...
