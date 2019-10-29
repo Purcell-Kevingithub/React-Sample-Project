@@ -9,7 +9,7 @@ class Testcomponent extends Component {
             <p>
                 LETS MAKE THIS THING SHOW UPPPPPP
             </p>
-            <button type="button" className={`btn btn-danger btn-lg`}>Choose Theme</button>
+            <button type="button" className={`btn btn-primary btn-lg`}>Choose Theme</button>
         </div>
       );
     }

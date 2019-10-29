@@ -1,23 +1,40 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
-import Testcomponent from './testcomponent';
-
+// import logo from './logo.svg';
+// import './App.css';
+// import Testcomponent from './testcomponent';
+import Table from './Table';
+import Form from './Form';
 
 class App extends Component {
+  
+  state = {
+    characters: [],
+  }
+
+  removeCharacter = index => {
+    const { characters } = this.state
+  
+    this.setState({
+      characters: characters.filter((character, i) => {
+        return i !== index
+      }),
+    })
+  }
+
+  handleSubmit = character => {
+    this.setState({ characters: [...this.state.characters, character] })
+  }
 
   render() {
+
+    const {characters} = this.state
+
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p id="help" className="text-uppercase">Helpful notes will appear here</p>
-          <p>E-mail: <input type="text" id="email" name="email" /></p>
-          <p>Name: <input type="text" id="name" name="name" /></p>
-          <p>Age: <input type="text" id="age" name="age" /></p>
-        </header>
-        <Testcomponent />
-      </div>
+        <div className="container">
+          <Table characterData={characters} removeCharacter={this.removeCharacter}/>
+          <Form handleSubmit={this.handleSubmit}/>
+          {/* <Testcomponent /> */}
+        </div>
     );
   }
 }
