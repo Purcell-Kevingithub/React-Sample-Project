@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
-// import logo from './logo.svg';
-// import './App.css';
-// import Testcomponent from './testcomponent';
 import Table from './Table';
 import Form from './Form';
+import './App.css';
 
 class App extends Component {
   
@@ -30,10 +28,14 @@ class App extends Component {
     const {characters} = this.state
 
     return (
-        <div className="container">
-          <Table characterData={characters} removeCharacter={this.removeCharacter}/>
-          <Form handleSubmit={this.handleSubmit}/>
-          {/* <Testcomponent /> */}
+        <div className="centerApp">
+          <div className="ui segment">
+            <Table characterData={characters} removeCharacter={this.removeCharacter}/>
+          </div>
+          <div className="ui segment">
+            <Form handleSubmit={this.handleSubmit}/>
+          </div>
+
         </div>
     );
   }
