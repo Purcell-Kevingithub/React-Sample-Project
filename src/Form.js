@@ -13,7 +13,6 @@ class Form extends Component {
 
     handleChange = event => {
         const { name, value } = event.target
-       
         this.setState({
             [name]: value,
         })
@@ -30,14 +29,14 @@ class Form extends Component {
         const { task } = this.state;
         
         return (
-            <form>
+            <form onSubmit={e => { e.preventDefault(); }}>
             <input
                 type="text"
                 name="task"
                 value={task}
                 placeholder="Enter To-Do"
                 onChange={this.handleChange} />
-            <input className="ui inverted olive button" type="button" value="Submit" onClick={this.submitForm} />
+            <input className="ui inverted olive button" type="button" value="Submit" onClick={this.submitForm}  />
             </form>
             
         );

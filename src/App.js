@@ -14,7 +14,7 @@ class App extends Component {
   
     this.setState({
       characters: characters.filter((character, i) => {
-        return i !== index
+        return i !== index;
       }),
     })
   }
@@ -28,13 +28,18 @@ class App extends Component {
     const {characters} = this.state
 
     return (
-        <div className="centerApp">
-          <div className="ui segment">
+        <div className="grid-container">
+          <div className="ui segment grid-item item1">
             <Table characterData={characters} removeCharacter={this.removeCharacter}/>
           </div>
-          <div className="ui segment">
+          <div className="ui segment grid-item item2">
             <Form handleSubmit={this.handleSubmit}/>
           </div>
+          <div className="grid-item">3</div>
+          <div className="grid-item">4</div>
+          <div className="grid-item item5 ">5</div>
+
+
 
         </div>
     );

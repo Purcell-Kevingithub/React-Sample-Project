@@ -2,16 +2,12 @@ import React, { Component } from 'react';
 
 const TableHeader = () => {
   return (
-    <thead>
-      <tr>
-        <th>To-do's</th>
-      </tr>
-    </thead>
-  )
+    <div>To-do's</div>
+  );
 }
 
 const TableBody = props => {
-  const rows = props.characterData.map((row, index) => {
+  const row = props.characterData.map((row, index) => {
     return (
       <ul key={index}>
         <li>
@@ -23,7 +19,7 @@ const TableBody = props => {
     )
   })
 
-  return <tbody>{rows}</tbody>
+  return <div>{row}</div>
   
 }
 
