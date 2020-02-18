@@ -23,24 +23,22 @@ class App extends Component {
     this.setState({ characters: [...this.state.characters, character] })
   }
 
-  render() {
+  test = () => {
+    this.setState({ characters: [] });
+  }
 
+  render() {
+    // this.setState({ characters: [] })
     const {characters} = this.state
 
     return (
         <div className="grid-container">
-          <div className="ui segment grid-item item1">
+          <div className="ui segment item1">
+            <Form handleSubmit={this.handleSubmit} test={this.test}/>
+          </div>
+          <div className="ui segment item2" style={{marginTop: '14px'}}>
             <Table characterData={characters} removeCharacter={this.removeCharacter}/>
           </div>
-          <div className="ui segment grid-item item2">
-            <Form handleSubmit={this.handleSubmit}/>
-          </div>
-          <div className="grid-item">3</div>
-          <div className="grid-item">4</div>
-          <div className="grid-item item5 ">5</div>
-
-
-
         </div>
     );
   }
