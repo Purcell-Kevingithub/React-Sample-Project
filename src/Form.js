@@ -29,16 +29,20 @@ class Form extends Component {
         const { task } = this.state;
         
         return (
-            <form className="ui input focus" onSubmit={e => { e.preventDefault(); }}>
-            <input
-                type="text"
-                name="task"
-                value={task}
-                placeholder="Enter To-Do"
-                onChange={this.handleChange} />
-            <input className="ui inverted olive button" type="button" value="Submit" onClick={this.submitForm}/>
-            <button onClick={() => this.props.test()}>Reset All</button>
-            </form>
+          <div>
+              <form className="ui input" onSubmit={e => { e.preventDefault(); }}>
+                <input
+                    type="text"
+                    name="task"
+                    value={task}
+                    placeholder="Enter To-Do"
+                    onChange={this.handleChange} />
+                </form>
+              <br/>
+              <br/>
+              <input className="ui inverted orange button" type="button" value="Submit" onClick={this.submitForm}/>
+              <button className="ui inverted blue button" onClick={() => this.props.test()}>Reset All</button>
+          </div>
             
         );
         }

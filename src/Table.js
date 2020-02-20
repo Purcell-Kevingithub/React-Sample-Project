@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 const TableHeader = () => {
   return (
-    <div>To-do's</div>
+    <div><h2>To-do's</h2></div>
   );
 }
 
@@ -14,8 +14,8 @@ const TableBody = props => {
       <ul key={index}>
         <li>
           <p>{row.task}</p>
-          <button className="ui inverted green button">Finish</button>
-          <button className="ui inverted red button" onClick={() => props.removeCharacter(index)}>Delete</button>
+          <button className="ui inverted orange button">Finish</button>
+          <button className="ui inverted blue button" onClick={() => props.removeCharacter(index)}>Delete</button>
         </li>
       </ul>
     )

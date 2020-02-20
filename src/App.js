@@ -32,11 +32,11 @@ class App extends Component {
     const {characters} = this.state
 
     return (
-        <div className="grid-container">
-          <div className="ui segment item1">
+        <div className="grid-container" style={{paddingTop: '50px'}}>
+          <div className="ui segment container">
             <Form handleSubmit={this.handleSubmit} test={this.test}/>
           </div>
-          <div className="ui segment item2" style={{marginTop: '14px'}}>
+          <div className="ui segment container" >
             <Table characterData={characters} removeCharacter={this.removeCharacter}/>
           </div>
         </div>
