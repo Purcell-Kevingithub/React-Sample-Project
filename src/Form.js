@@ -40,7 +40,7 @@ class Form extends Component {
                 </form>
               <br/>
               <br/>
-              <input className="ui inverted orange button" type="button" value="Submit" onClick={this.submitForm}/>
+              <input className="ui inverted orange button" type="button" value="Create" onClick={this.submitForm}/>
               <button className="ui inverted blue button" onClick={() => this.props.reset()}>Reset All</button>
           </div>
             
