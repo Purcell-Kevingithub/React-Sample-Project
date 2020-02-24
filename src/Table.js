@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './Table.css';
 
 const TableHeader = () => {
   return (
@@ -7,15 +8,12 @@ const TableHeader = () => {
 }
 
 const TableBody = props => {
-
-
   const row = props.characterData.map((row, index) => {
     return (
       <ul key={index}>
         <li>
           <p>{row.task}</p>
-          <button className="ui inverted orange button">Finish</button>
-          <button className="ui inverted blue button" onClick={() => props.removeCharacter(index)}>Delete</button>
+          <button className="ui inverted orange button" onClick={() => props.removeCharacter(index)}>Finish</button>
         </li>
       </ul>
     )
@@ -27,12 +25,12 @@ const TableBody = props => {
 
 class Table extends Component {
   render() {
-    const { characterData, removeCharacter, test } = this.props
+    const { characterData, removeCharacter } = this.props
 
     return (
       <table>
         <TableHeader />
-        <TableBody characterData={characterData} removeCharacter={removeCharacter}  test={test}/>
+        <TableBody characterData={characterData} removeCharacter={removeCharacter}/>
       </table>
     )
   }

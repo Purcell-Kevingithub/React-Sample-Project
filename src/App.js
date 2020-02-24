@@ -23,7 +23,7 @@ class App extends Component {
     this.setState({ characters: [...this.state.characters, character] })
   }
 
-  test = () => {
+  resetAll = () => {
     this.setState({ characters: [] });
   }
 
@@ -34,7 +34,7 @@ class App extends Component {
     return (
         <div className="grid-container" style={{paddingTop: '50px'}}>
           <div className="ui segment container">
-            <Form handleSubmit={this.handleSubmit} test={this.test}/>
+            <Form handleSubmit={this.handleSubmit} reset={this.resetAll}/>
           </div>
           <div className="ui segment container" >
             <Table characterData={characters} removeCharacter={this.removeCharacter}/>
