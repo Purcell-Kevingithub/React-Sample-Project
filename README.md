@@ -1,5 +1,5 @@
 ## General info
-This is To-do-App, which includes CRUD functionality, allow users to create a to-do list to help with his or her productivity.
+This app is designed to let the user create a list of tasks to complete and when done delete them from the list.
 
 ### Technologies
 * React
